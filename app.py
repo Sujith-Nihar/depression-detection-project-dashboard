@@ -227,7 +227,7 @@ elif section == "Model Performance":
     # --- Load Data ---
     st.subheader("🗂️ Data Overview")
     df = pd.read_excel('cleaned_merged_output.xlsx')
-    st.table(df.head(10))
+    st.dataframe(df.head(6))
 
     # --- Feature Selection ---
     drop_columns = ['Media Name', 'Profile Name', 'Simple Description', 'Embedded Text', 'Caption', 'Important Note', 'Diagnosed Date', 'Media Type']
