@@ -185,14 +185,14 @@ elif section == "Visualizations":
 
     with col1:
         st.subheader("😃 Normal User")
-        st.image("normal/pos_neg.png", caption="Positive vs Negative Trend", use_column_width=True)
-        st.image("normal/emotion_trend.png", caption="Smoothed Emotion Trends", use_column_width=True)
+        st.image("normal/pos_neg.png", caption="Positive vs Negative Trend", use_container_width=True)
+        st.image("normal/emotion_trend.png", caption="Smoothed Emotion Trends", use_container_width=True)
         st.image("normal/radar.png", caption="Average Emotion Profile (Radar Chart)")
 
     with col2:
         st.subheader("😞 Depressed User")
-        st.image("depressed/pos_neg.png", caption="Positive vs Negative Trend", use_column_width=True)
-        st.image("depressed/emotion_trend.png", caption="Smoothed Emotion Trends", use_column_width=True)
+        st.image("depressed/pos_neg.png", caption="Positive vs Negative Trend", use_container_width=True)
+        st.image("depressed/emotion_trend.png", caption="Smoothed Emotion Trends", use_container_width=True)
         st.image("depressed/radar.png", caption="Average Emotion Profile (Radar Chart)")
 
     st.subheader("Detailed Comparison: Healthy vs Depressed Individuals")
