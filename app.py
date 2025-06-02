@@ -353,4 +353,4 @@ elif section == "Model Performance":
 
 # --- Footer ---
 st.sidebar.markdown("---")
-st.sidebar.markdown("© 2025 Depression Detection Project | Built with ❤️ using Streamlit")
+st.sidebar.markdown("© 2025 Depression Detection Project | Built using Streamlit")
