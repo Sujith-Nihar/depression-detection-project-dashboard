@@ -259,13 +259,23 @@ elif section == "Model Performance":
     st.subheader("Random Forest - Confusion Matrix")
     cm_rf = confusion_matrix(y_test, y_pred_rf)
     fig_rf, ax_rf = plt.subplots(figsize=(4, 4))
-    sns.heatmap(cm_rf, annot=True, fmt='d', cmap='Blues', ax=ax_rf)
+    sns.heatmap(cm_rf, annot=True, fmt='d', cmap='Blues', ax=ax_rf,
+                xticklabels=['Predicted No', 'Predicted Yes'],
+                yticklabels=['Actual No', 'Actual Yes'])
+    ax_rf.set_xlabel('Predicted Label')
+    ax_rf.set_ylabel('True Label')
+    ax_rf.set_title('Random Forest - Confusion Matrix')
     st.pyplot(fig_rf, use_container_width=False)
 
     st.subheader("Logistic Regression - Confusion Matrix")
     cm_logreg = confusion_matrix(y_test, y_pred_logreg)
     fig_logreg, ax_logreg = plt.subplots(figsize=(4, 4))
-    sns.heatmap(cm_logreg, annot=True, fmt='d', cmap='Purples', ax=ax_logreg)
+    sns.heatmap(cm_logreg, annot=True, fmt='d', cmap='Purples', ax=ax_logreg,
+                xticklabels=['Predicted No', 'Predicted Yes'],
+                yticklabels=['Actual No', 'Actual Yes'])
+    ax_logreg.set_xlabel('Predicted Label')
+    ax_logreg.set_ylabel('True Label')
+    ax_logreg.set_title('Logistic Regression - Confusion Matrix')
     st.pyplot(fig_logreg, use_container_width=False)
 
     # --- Feature Importances ---
