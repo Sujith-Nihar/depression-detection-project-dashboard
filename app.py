@@ -227,7 +227,7 @@ elif section == "Model Performance":
     # --- Load Data ---
     st.subheader("🗂️ Data Overview")
     df = pd.read_excel('cleaned_merged_output.xlsx')
-    st.dataframe(df.head())
+    st.table(df.head(10))
 
     # --- Feature Selection ---
     drop_columns = ['Media Name', 'Profile Name', 'Simple Description', 'Embedded Text', 'Caption', 'Important Note', 'Diagnosed Date', 'Media Type']
@@ -335,11 +335,11 @@ elif section == "Model Performance":
 
     st.markdown("**Random Forest - Classification Report**")
     rf_report = classification_report(y_test, y_pred_rf, output_dict=True)
-    st.dataframe(pd.DataFrame(rf_report).transpose())
+    st.table(pd.DataFrame(rf_report).transpose())
 
     st.markdown("**Logistic Regression - Classification Report**")
     logreg_report = classification_report(y_test, y_pred_logreg, output_dict=True)
-    st.dataframe(pd.DataFrame(logreg_report).transpose())
+    st.table(pd.DataFrame(logreg_report).transpose())
 
 # --- Footer ---
 st.sidebar.markdown("---")
